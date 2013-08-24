@@ -1,0 +1,256 @@
+html{
+	background-color: black;
+	color: white;
+	
+	background-image:url('popcorn.jpg');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-attachment: fixed;  
+	background-size: 100%;
+}
+@font-face {
+	font-family: 'Las Vegas Jackpot';
+	src: 	url('las-vegas-jackpot.ttf') format('truetype'),
+			url('las-vegas-jackpot.svg') format('svg'),
+			url('las-vegas-jackpot.otf') format('otf');
+}
+@font-face {
+	font-family: 'Titillium';
+	src: 	url('titillium.ttf') format('truetype'),
+			url('titillium.svg') format('svg'),
+			url('titillium.otf') format('otf');
+}
+@font-face {
+	font-family: 'Peach Milk';
+	src: url('peach_milk.ttf')  format('truetype'),
+		 url('peach_milk.svg') format('svg'),
+		 url('peach_milk.otf') format('otf');
+}
+body{
+	font-family: Titillium;
+}
+.tbBlur{
+	color: gray;
+}
+#headTitle{
+	width: 600px;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	float: center;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	text-align: center;
+}
+#sHead{
+	width: 80%;
+	margin: auto;
+	margin-top: 20px;
+	float: center;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row;
+	flex-flow: row;
+	-webkit-align-content: flex-end;
+	align-content: flex-end;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-align-items: center;
+	align-items: center;
+}
+#title{
+	color: #FFDD00;
+	text-align: center;
+	font-family: Las Vegas Jackpot;
+	font-size: 600%;
+}
+#sTitle{
+	color: #FFDD00;
+	width: 400px;
+	margin-right: 15px;
+	text-align: right;
+	font-family: Las Vegas Jackpot;
+	font-size: 70px;
+}
+#titleLink{
+	text-decoration: none;
+}
+#searchMovie{
+	font-family: Titillium;
+	font-size: 20px;
+	width: 100%;
+	height: 35px;
+	border-radius: 5px;
+}
+#sMovie{
+	font-family: Titillium;
+	font-size: 20px;
+	margin-left: 15px;
+	height: 35px;
+	width: 90%;
+	border-radius: 5px;
+}
+#movieLinks{
+	font-size: 20px;
+	text-align: center;
+}
+.link:link, .newLink:link {
+	color:white;
+	text-decoration: none;
+}	
+.link:visited, .newLink:visited {
+	color:white;
+	text-decoration: none;
+}	
+.link:hover, .newLink:hover {
+	color:#FF4000;
+}		
+.link:active, .newLink:active {
+	color:white;
+	text-decoration: none;
+}
+.newLink{
+	font-size: 14px;
+	text-align: center;
+}
+.sDiv1{
+	width: 50%;
+	text-align: right;
+}
+.sDiv2{
+	width: 50%;
+	text-align: left;
+}
+.searchHead{
+	margin: auto;
+	width: 70%;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.pageNumbers{
+	margin: auto;
+	width: 70%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.pageSelect{
+	margin: 3px;
+}
+.pageSelect:link{
+	color: white;
+	text-decoration: none;
+}
+.pageSelect:visited{
+	color: white;
+	text-decoration: none;
+}
+.pageSelect:hover{
+	color: #F70000;
+	text-decoration: none;
+}
+.pageSelect:active{
+	color: white;
+	text-decoration: none;
+}
+.movieEntry{
+	background-image: url('popcorn-movie2.jpg');
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	color: black;
+	float: center;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 5px solid #FF3C00;
+	background-color: white;
+	width: 70%;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+.movieThumbnail{
+	border: 2px solid black;
+	height: 200px;
+	width: 150px;
+	margin: 10px;
+	border-top-left-radius: 8px;
+}
+.movieTitle{
+	font-size: 24px;
+	margin: 12px;
+	width: 500px;
+}
+.movieTitle  > a:link{
+	color: #FFBF00;
+	text-decoration: none;
+}
+.movieTitle  > a:visited{
+	color: #FFBF00;
+	text-decoration: none;
+}
+.movieTitle  > a:hover{
+	color: #FC0000;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 28px;
+}
+.movieTitle  > a:active{
+	color: #FFBF00;
+	text-decoration: none;
+}
+.moviePreview{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row;
+	flex-flow: row;
+}
+.movieDescription{
+	margin: 10px;
+}
+.movieClip{
+	margin-top: 10px;
+	text-align:center;
+}
+.mClip{
+	width:200px;
+	display:inline;
+}
+.mThumb{
+	margin: 5px;
+	height: 135px;
+	width: 180px;
+}
+footer{
+	color: black;
+	font-size: 18px;
+	margin-top: 20px;
+	text-align: center;
+	position: relative;
+	bottom: 10px;
+	display: block;
+}
+.fLink:visited {
+	color: black;
+	text-decoration: none;
+}
+.fLink:link{
+	color: black;
+	text-decoration: none;
+}
+.fLink:hover{
+	color: #C90000;
+	text-decoration: none;
+}
+.fLink:active{
+	color: black;
+	text-decoration: none;
+}
+#teamName{
+	font-family: Peach Milk;
+	font-size: 40px;
+}
+.loadHead{
+	text-align: center;
+	margin: auto;
+	float: center;
+}
