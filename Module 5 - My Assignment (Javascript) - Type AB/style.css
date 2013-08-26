@@ -1,0 +1,60 @@
+.main {
+	width: 1200px;
+	margin: auto;
+	float: center;
+	font-family: Courier New;
+	}
+
+#main-left {
+	width: 100%;
+	height: auto;
+	float: center;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+#input-box {
+	width: 40%;
+	margin: auto;
+	font-family: Courier New;
+	font-size: 15px;
+	color: #0d639a;
+}
+
+#toggle {
+	width: 40%;
+	margin: auto;
+	margin-top: 10px;
+	float: center;
+}
+
+#toggleBTN, #removeALLBTN {
+	text-decoration: none;
+	font-size: 120%;
+}
+
+#textBox {
+	width: 500px;
+}
+
+#toDoList {
+	list-style: none;
+	margin-top: 25px;
+}
+
+.doneTask {
+	color: #a5a6a6;
+	text-decoration: line-through;
+}
+
+h1{
+	margin-top: 7%;
+	text-align:center;
+	font-family:Courier New;
+	}
+
+li {
+	margin-left: 300px;
+	margin-top:20px;
+	font-size: 120%;
+}

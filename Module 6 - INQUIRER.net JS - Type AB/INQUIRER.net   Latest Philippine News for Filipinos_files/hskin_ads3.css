@@ -1,0 +1,66 @@
+#wallpaperAd_left2{
+
+/* background:url(http://www.inquirer.net/wp-content/themes/Homepage/images/Tcpi_L.jpg) no-repeat right; */
+width:50%;
+	height:840px;
+	position:absolute;
+	top:203px;
+	z-index:1;	
+	overflow:hidden;
+	margin-left: -492px;
+text-align: right;	
+}
+#wallpaperAd_left3{
+
+/* background:url(http://www.inquirer.net/wp-content/themes/Homepage/images/Tcpi_L.jpg) no-repeat right; */
+	width:50%;
+	height:840px;
+	position:absolute;
+	top:141px;
+	z-index:1;	
+	overflow:hidden;	
+	text-align: right;
+	left: 0px;
+}
+#wallpaperAd_right2{
+/* background:url(http://www.inquirer.net/wp-content/themes/Homepage/images/Tcpi_R.jpg) no-repeat 496px; */
+	width:50%;
+	height:840px;
+	position:absolute;
+	top:141px;
+	z-index:1;	
+	right:0;
+	overflow:hidden;	
+}
+#wall_addmargin
+{
+width:334px;
+	height:840px;
+	position: relative;
+	text-align: right;
+	z-index:1;	
+	right:-500px;
+	overflow:hidden;	
+	top: 0px;
+}
+
+#wall_addmargin_left
+{
+	width:334px;
+	height:840px;
+	position: relative;
+	float: right;
+	z-index:1;	
+	left:-497px;
+	overflow:hidden;	
+	top: 0px;
+		
+}
+#wrapper {
+	padding:0 5px 7px;
+	background:#fff;
+	width:970px;
+	margin:0 auto;
+	position: relative;
+	z-index:2;
+}

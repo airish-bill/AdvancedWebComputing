@@ -1,0 +1,3 @@
+function displayst(country,param,width,height,alt){ord=Math.random()*10000000000000000;document.write('<a href="http://ad'+country+'.doubleclick.net/jump/'+param+ord+'?" target="_blank">');document.write('<img src="http://ad'+country+'.doubleclick.net/ad/'+param+'ord='+ord+'?" width="'+width+'" height="'+height+'" border="0" alt="'+alt+'">'+alt+'</a>');}
+function myobject(){this.value=Math.random()*10000000000000000;}
+var ord=new myobject();function displayso(country,param,width,height,alt){document.write('<script language="JavaScript" src="http://ad'+country+'.doubleclick.net/adj/'+param+';ord='+ord.value+'?" type="text/javascript"></scr'+'ipt>');}

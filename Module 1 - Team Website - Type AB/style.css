@@ -1,0 +1,48 @@
+#team {
+	text-align: center;
+	color: red;
+	font-size: 150;
+	font-family: a dripping marker;
+	height: 150px;
+}
+
+h2 {
+	text-align: center;
+	color: white;
+}
+
+img {
+	height: 500px;
+	width: 350px;
+}
+
+
+
+.main {
+	width: 1200px;
+	margin: auto;
+}
+
+.main .ai {
+	width: 600px;
+	float: left;
+	font-size: 20;
+	font-family: Lamebrain BRK;
+	color: white;
+	height: 1000px;
+
+}
+
+.main .bi {
+	width: 600px;
+	float: right;
+	color: white;
+	font-size: 20;
+	font-family: Lamebrain BRK;
+	height: 1000px;
+}
+
+.add {
+	height: 50px;
+	width: 50px;
+};

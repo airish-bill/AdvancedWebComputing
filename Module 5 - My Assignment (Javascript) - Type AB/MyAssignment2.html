@@ -1,0 +1,183 @@
+<html>
+<head>
+    <title>My Assignment</title>
+    <link rel=stylesheet href="style.css">
+</head>
+<body background = 'paper.jpg'>
+        
+
+    <div class='main'>
+    	<h1>To Do List<br><span id = 'doneTaskCNT'>0</span> / <span id = 'allTaskCNT'>0</span></h1>
+
+    	<div id = 'main-left'>
+            <center>
+            <div id = 'input-box'>
+	           <input id='textBox' type='text'/><br><span id = "note">Press ENTER to add task</span>
+            </div>
+
+            <div id = 'toggle'>
+                <a id = 'toggleBTN' href = '#'>Toggle All Tasks</a> &nbsp; <a id = 'removeAllBTN' href = '#'>Remove All Done Task/s</a>
+            </div>
+            </center>
+	        <ul id='toDoList'>
+
+	        </ul>
+    	</div>
+    </div>
+    <script>
+        var doneTaskEl = document.getElementById('doneTaskCNT');
+        var allTaskEl = document.getElementById('allTaskCNT');
+        var txtBoxEl = document.getElementById('textBox');
+        var btnToggleEl = document.getElementById('toggleBTN');
+        var btnRemoveAll = document.getElementById('removeAllBTN');
+        var toDoListEl = document.getElementById('toDoList');
+        var allTask = [];
+        var doneTask = [];
+        var undoneTask = [];
+		
+        btnToggleEl.onclick = onClickToggleTask;
+        btnRemoveAll.onclick = onClickRemoveDoneTask;
+		
+        txtBoxEl.onkeydown = function(event){
+            if (event.keyCode == 13) {
+                onClickShow();
+            }
+        }
+		
+        function onClickShow() {
+
+            if (textBox.value == '') {
+                alert('Blank Input');
+            }
+
+            else {
+				var duplicateTask = false;
+                for (var i = 0; i < allTask.length; i++) {
+                    if (allTask[i] == txtBoxEl.value) {
+                        duplicateTask = true;
+                    }
+                }
+
+                if (duplicateTask == true) {
+                    alert('Duplicate Task');
+                } else {             
+					var itemEl = document.createElement('li');
+					var listMarkup =
+					'<div class="todo-item">' +
+						'<input class = "cb" type = "checkbox">&nbsp;' +
+						'<span class="task">' + txtBoxEl.value + '</span>' +
+				   '</div>';    
+					itemEl.innerHTML = listMarkup;
+					toDoListEl.insertBefore(itemEl, toDoListEl.childNodes[0]);
+					
+					allTask.push(txtBoxEl.value);
+					undoneTask.push(txtBoxEl.value);
+					textBox.value = '';
+					
+					doneTaskEl.innerHTML = doneTask.length;
+					allTaskEl.innerHTML = allTask.length;
+
+					var cbBtnEl = itemEl.getElementsByClassName('cb')[0];
+					cbBtnEl.onclick = onClickCheckbox;
+                }
+            }
+        }
+
+        function onClickCheckbox(){
+            var cbBtnEl = event.target;
+			var liItem = cbBtnEl.parentNode;
+			var cbBtnValueEl;
+			
+			if (cbBtnEl.checked) {
+				cbBtnValueEl = liItem.getElementsByClassName('task')[0];
+				for (var i = 0; i < undoneTask.length; i++){
+					if (cbBtnValueEl.innerText == undoneTask[i]){
+						doneTask.push(undoneTask[i]);
+						undoneTask.splice(i, 1);
+					}
+				}
+				cbBtnValueEl.className = 'doneTask';
+			} else {
+				cbBtnValueEl = liItem.getElementsByClassName('doneTask')[0];
+				for (var i = 0; i < doneTask.length; i++){
+					if (cbBtnValueEl.innerText == doneTask[i]){
+						undoneTask.push(doneTask[i]);
+						doneTask.splice(i, 1);
+					}
+				}
+				cbBtnValueEl.className = 'task';
+			}
+			
+			doneTaskEl.innerHTML = doneTask.length;
+        }
+
+        function onClickToggleTask(){
+            var chckCntr = 0;
+            for (var i = 0; i < allTask.length; i++) {
+                var cbEl = document.getElementsByClassName('cb')[i];
+                
+                if (cbEl.checked) {
+                    chckCntr++;
+                };
+            }
+			
+            for (var i = 0; i < allTask.length; i++) {
+                var cbEl = document.getElementsByClassName('cb')[i];
+            
+                if (chckCntr != allTask.length) {
+					if (!cbEl.checked) {
+						var cbBtnValueEl = document.getElementsByClassName('task')[0];
+						cbBtnValueEl.className = 'doneTask';
+						for (var j = 0; j < undoneTask.length; j++){
+							if (cbBtnValueEl.innerText == undoneTask[j]){
+								doneTask.push(undoneTask[j]);
+								undoneTask.splice(j, 1);
+							}
+						}
+					}
+                    cbEl.checked = true;
+                } else {
+					if (cbEl.checked) {
+						var cbBtnValueEl = document.getElementsByClassName('doneTask')[0];
+						cbBtnValueEl.className = 'task';
+						for (var j = 0; j < doneTask.length; j++){
+							if (cbBtnValueEl.innerText == doneTask[j]){
+								undoneTask.push(doneTask[j]);
+								doneTask.splice(j, 1);
+							}
+						}
+					}
+                    cbEl.checked = false;
+                }
+            }
+			
+			doneTaskEl.innerHTML = doneTask.length;
+        }
+
+        function onClickRemoveDoneTask(){
+			var donelength = doneTask.length;
+			for(var i = 0; i < donelength; i++) {
+				for (var j = 0; j < allTask.length; j++) {
+					if (doneTask[i] == allTask[j]) {
+						allTask.splice(j, 1);
+					}
+				}
+			}
+			
+			for(var i = 0; i < donelength; i++) {
+				var liItem = document.getElementsByClassName('doneTask')[0].parentNode.parentNode;
+				liItem.remove();
+			}
+			
+			
+			for (var i = 0; i < donelength; i++) {
+				doneTask.splice(0, 1);
+			}
+			
+			doneTaskEl.innerHTML = doneTask.length;
+			allTaskEl.innerHTML = allTask.length;
+        }
+    </script>
+</body>
+
+</html>
