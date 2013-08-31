@@ -1,0 +1,119 @@
+<html>
+<head>
+    <title>My Assignment</title>
+    <link rel=stylesheet href="style.css">
+</head>
+<body background = 'paper.jpg'>
+
+	<div class = 'main'>
+    	<br>
+        <br>
+    	<h1>MY ASSIGNMENTS</h1>
+    <div class='todo'>
+        <h2>TO-DO <b class = "numDone">0</b>/<b class = "numTask">0</b></h2>
+        <input id='txtbox' type='text' onkeydown = "
+			if (event.keyCode == 13) {
+				document.getElementById('btn-add').click();
+			}
+		"/>
+        <a id='btn-add' href="#"></a> <br>
+		
+		<a id='check-all' href="#">Toggle all Tasks</a>
+		
+        <ul id='todo-list'>
+        </ul>
+        
+    </div>
+    </div>
+
+    <script>
+        var txtBoxEl = document.getElementById('txtbox');
+        var btnShowEl = document.getElementById('btn-add');
+        var todoListEl = document.getElementById('todo-list');
+        var doneListEl = document.getElementById('done-list');
+		var checkAllEl = document.getElementById('check-all');
+		var checkNumDone = document.getElementsByClassName('numDone');
+		var checkNumTask = document.getElementsByClassName('numTask');
+		var checkEl = document.getElementsByClassName('check');
+        btnShowEl.onclick = onClickShow;
+        checkAllEl.onclick = checkAll;
+		var checkedAll = false;
+		
+		function checkAll() {
+			var items = todoListEl.getElementsByTagName("li");
+			
+			for (i = 0; i < items.length; i++){
+				if (checkedAll == false){
+					document.getElementsByClassName('check')[i].checked = true;
+					checkNumDone[0].innerHTML = items.length.toString();
+					checkNumTask[0].innerHTML = items.length.toString();
+
+					if(i == items.length - 1){
+						checkedAll = true;
+					}
+				} else {
+					document.getElementsByClassName('check')[i].checked = false;
+					checkNumDone[0].innerHTML = 0;
+					checkNumTask[0].innerHTML = items.length.toString();
+
+					if(i == items.length - 1){
+						checkedAll = false;
+					}
+				}
+			}
+			return checkedAll;
+		}
+
+        function onClickShow() {
+			var hasDuplicate = false;
+			var items = todoListEl.getElementsByTagName("li");
+			var text = txtBoxEl.value.toLowerCase();
+			var doneCount = 0;
+
+			
+			for (i = 0; i < items.length; i++){
+				if (document.getElementsByTagName('span')[i].innerHTML == text) {
+					hasDuplicate = true;
+				}
+
+				if (checkNumDone[0].checked) {
+					doneCount++;
+				}
+			}
+
+			if ((txtBoxEl.value.length != 0) && (hasDuplicate == false)){
+				var itemEl = document.createElement('li');
+				var listMarkup =
+					'<div class="todo-item">' + '<input class = "check" type = "checkbox"/>' +
+					'<span class="name">' + txtBoxEl.value + '</span>' +
+					'<a class="complete" href="#"></a>' 
+					'</div>';
+				itemEl.innerHTML = listMarkup;
+				var comBtnEl = itemEl.getElementsByClassName('complete')[0];
+				comBtnEl.onclick = onClickComplete;
+				txtBoxEl.value = "";
+				todoListEl.insertBefore(itemEl, todoListEl.childNodes[0]);
+
+				var cbBtnEl = itemEl.getElementsByClassName('cb')[0];
+				cbBtnEl.onclick = onClickCheckbox;
+			} else if((txtBoxEl.value.length == 0) && (hasDuplicate == false)){
+				alert("Blank input");
+			} else if((txtBoxEl.value.length != 0) && (hasDuplicate == true)){
+				alert("Duplicate Task");
+			}
+
+			checkNumDone[0].innerHTML = doneCount.toString();
+			checkNumTask[0].innerHTML = items.length.toString();
+        }
+
+        function onClickComplete(event) {
+            var comBtnEl = event.target;
+            var liItem = comBtnEl.parentNode;
+            comBtnEl.remove();
+            liItem.remove();
+            doneListEl.appendChild(liItem,firstChild);
+        }
+    </script>
+</body>
+
+</html>
