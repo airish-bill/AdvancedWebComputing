@@ -39,13 +39,13 @@ audio:not([controls]) {
 [hidden] {
   display: none;
 }
-
+/*
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-
+*/
 body {
   margin: 0;
 }
@@ -293,7 +293,7 @@ table {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-
+/*
 html {
   font-size: 62.5%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -306,7 +306,7 @@ body {
   color: #333333;
   background-color: #ffffff;
 }
-
+*/
 input,
 button,
 select,
@@ -449,7 +449,7 @@ cite {
 .text-center {
   text-align: center;
 }
-
+/*
 h1,
 h2,
 h3,
@@ -466,7 +466,7 @@ h6,
   font-weight: 500;
   line-height: 1.1;
 }
-
+*/
 h1 small,
 h2 small,
 h3 small,
@@ -487,15 +487,15 @@ h6 small,
 h1,
 h2,
 h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 h4,
 h5,
 h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 h1,
@@ -5745,7 +5745,7 @@ body.modal-open,
   position: absolute;
   z-index: 1030;
   display: block;
-  font-size: 12px;
+  font-size: 11px; /*12px origin*/
   line-height: 1.4;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -5778,7 +5778,7 @@ body.modal-open,
 }
 
 .tooltip-inner {
-  max-width: 200px;
+  max-width: 120px; /*250px original*/
   padding: 3px 8px;
   color: #ffffff;
   text-align: center;
@@ -6057,9 +6057,9 @@ body.modal-open,
 
 .carousel-control {
   position: absolute;
-  top: 0;
+  /*top: 0;*/
   bottom: 0;
-  left: 0;
+  /*left: 0;*/
   width: 15%;
   font-size: 20px;
   color: #ffffff;
@@ -6079,8 +6079,6 @@ body.modal-open,
 }
 
 .carousel-control.right {
-  right: 0;
-  left: auto;
   background-image: -webkit-gradient(linear, 0 top, 100% top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
   background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.0001) 0), color-stop(rgba(0, 0, 0, 0.5) 100%));
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.5) 100%);
@@ -6114,7 +6112,7 @@ body.modal-open,
   height: 20px;
   margin-top: -10px;
   margin-left: -10px;
-  font-family: serif;
+  /*font-family: serif;*/
 }
 
 .carousel-control .icon-prev:before {

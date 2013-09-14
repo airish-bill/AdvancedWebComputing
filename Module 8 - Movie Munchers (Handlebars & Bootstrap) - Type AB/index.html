@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Movie Munchers v2.0</title>
+		<link rel="stylesheet" href = "css/style.css">
+		<link rel="stylesheet" href = "bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href = "css/jquery.mCustomScrollbar.css">
+		<link rel="shortcut icon" href="css/images/popcorn-favicon.ico">
+		<script type = "text/javascript" src = "js/jquery.js"></script>
+		<script type = "text/javascript" src = "js/handlebars.js"></script>
+		<script type = "text/javascript" src = "js/app.js"></script>
+		<script type = "text/javascript" src = "bootstrap/js/bootstrap.js"></script>
+		<script type = "text/javascript" src = "bootstrap/js/bootstrap.min.js"></script>
+		<script type = "text/javascript" src = "js/jquery.mCustomScrollbar.concat.min.js"></script>
+	</head>
+	<body>	
+		<header><div id = 'headerDiv'>
+			<div id = 'headTitle'>
+				<div class = 'sDiv1'>
+					<a href = '#' id = 'titleLink'><b id = 'title'>MOVIE MUNCHERS</b><b id = 'ver'> v2.0</b></a>
+				</div>
+				<div class = 'sDiv2'>
+					<input id = 'searchMovie' type = 'text' placeholder = "Munch on a movie...">
+				</div>	
+			</div>
+			<div id = 'movieLinks'>
+				<a class = 'link' href = '#'>Box Office Movies&nbsp;</a>
+				<a class = 'link' href = '#'>&nbsp;In Theaters Movies&nbsp;</a>
+				<a class = 'link' href = '#'>&nbsp;Opening Movies&nbsp;</a>
+				<a class = 'link' href = '#'>&nbsp;Upcoming Movies</a><br>
+				<a class = 'link' href = '#'>Top Rentals&nbsp;</a>
+				<a class = 'link' href = '#'>&nbsp;Current Release DVDs&nbsp;</a>
+				<a class = 'link' href = '#'>&nbsp;New Release DVDs&nbsp;</a>
+				<a class = 'link' href = '#'>&nbsp;Upcoming DVDs</a>
+			</div>
+			
+			<div id="firstCarousel" class="carousel slide">
+	            <div class="carousel-inner">
+	              <div class = "active item">
+	              	<a class = 'smallLink' href = '#'>Box Office Movies</a>&nbsp;&nbsp;&nbsp;
+	              	<a class = 'smallLink' href = '#'>In Theaters Movies</a>
+	              </div>
+	              <div class = "item">
+	              	<a class = 'smallLink' href = '#'>Opening Movies</a>&nbsp;&nbsp;&nbsp;
+	              	<a class = 'smallLink' href = '#'>Upcoming Movies</a>
+	              </div>
+	              <div class = "item">
+	              	<a class = 'smallLink' href = '#'>Top Rentals</a>&nbsp;&nbsp;&nbsp;
+	              	<a class = 'smallLink' href = '#'>Current Release DVDs</a>
+	              </div>
+	              <div class = "item">
+	              	<a class = 'smallLink' href = '#'>New Release DVDs</a>&nbsp;&nbsp;&nbsp;
+		            <a class = 'smallLink' href = '#'>Upcoming DVDs</a>
+	              </div>
+	            </div>
+	            <!-- Carousel nav -->
+	            <a class="carousel-control left" href="#firstCarousel" data-slide="prev"><img src = "css/images/left.png"/></a>
+	            <a class="carousel-control right" href="#firstCarousel" data-slide="next"><img src = "css/images/right.png"/></a>
+	        </div>
+
+			<div id="secondCarousel" class="carousel slide">
+	            <div class="carousel-inner">
+	              <a class = 'smallLink active item' href = '#'>Box Office Movies</a>
+	              <a class = 'smallLink item' href = '#'>In Theaters Movies</a>
+	              <a class = 'smallLink item' href = '#'>Opening Movies</a>
+	              <a class = 'smallLink item' href = '#'>Upcoming Movies</a>
+	              <a class = 'smallLink item' href = '#'>Top Rentals</a>
+	              <a class = 'smallLink item' href = '#'>Current Release DVDs</a>
+	              <a class = 'smallLink item' href = '#'>New Release DVDs</a>
+	              <a class = 'smallLink item' href = '#'>Upcoming DVDs</a>
+	            </div>
+	            <!-- Carousel nav -->
+	            <a class="carousel-control left" href="#secondCarousel" data-slide="prev"><img src = "css/images/left.png"/></a>
+	            <a class="carousel-control right" href="#secondCarousel" data-slide="next"><img src = "css/images/right.png"/></a>
+	        </div>
+		</div></header>
+        
+		<!--script-->
+			<div id = "movieBody">
+		        <div id = "movieContainer">
+		        	
+		        </div>
+	        </div>
+		<!--/script-->
+        
+		<footer>
+			<div>
+				<b id = "footerName">TYPE AB</b>
+				<span id = "copyright">&nbsp;&copy;&nbsp;2013&nbsp;&nbsp;</span>
+				<a id = "aboutUs" href = "#">About Us</a>
+				<span id = "txt">&nbsp;powered by </span>
+				<a href="http://www.rottentomatoes.com/" target = "_blank" id = "RTlink">Rotten Tomatoes</a>
+			</div>
+		</footer>
+	</body>
+</html>
