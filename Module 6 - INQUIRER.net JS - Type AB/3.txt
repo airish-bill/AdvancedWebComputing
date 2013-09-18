@@ -1,0 +1,1 @@
+for (var i = 0; i < document.getElementById('lateststories').childNodes.length; i++) {document.getElementsByClassName('LS-linkLS')[i].setAttribute("href","http://www.google.com"); document.getElementsByClassName('LS-linkLS')[i].setAttribute("target", "_blank");}

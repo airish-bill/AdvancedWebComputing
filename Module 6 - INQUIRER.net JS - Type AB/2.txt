@@ -1,0 +1,3 @@
+document.getElementById('slide_ads').remove()
+document.getElementsByClassName('ads_div')[0].remove()
+document.getElementById('primaryTopSidebar').remove()

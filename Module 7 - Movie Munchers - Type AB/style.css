@@ -29,9 +29,12 @@ html{
 body{
 	font-family: Titillium;
 }
+<<<<<<< HEAD
 .tbBlur{
 	color: gray;
 }
+=======
+>>>>>>> c39c6350aa7f104d91266a85c7078d8963c918e2
 #headTitle{
 	width: 600px;
 	margin: auto;

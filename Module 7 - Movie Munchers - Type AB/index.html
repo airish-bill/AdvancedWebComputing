@@ -14,8 +14,12 @@
 			</div>
 			<div>
 				<input id = 'searchMovie' type = 'text'  
+<<<<<<< HEAD
 				onblur = "if (this.value == '') {$(this).addClass('tbBlur'); this.value = 'Search movies...';}"
 				onfocus = "if (this.value == 'Search movies...') {$(this).removeClass(); this.value = '';}"
+=======
+				placeholder = "Munch on a movie..."
+>>>>>>> c39c6350aa7f104d91266a85c7078d8963c918e2
 				onkeydown ="if (event.keyCode == 13 && this.value.trim() != '' ) {pageNum = 1; searchString = $(this).val(); mode = 'search'; searchMovie();}">
 			</div>	
 		</div>
