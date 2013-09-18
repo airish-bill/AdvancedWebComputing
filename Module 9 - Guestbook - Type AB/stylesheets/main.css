@@ -1,0 +1,28 @@
+body {
+  font-family: Titillium;
+  background-color: #DEB887;
+  
+}
+
+h1{
+	margin-top: 7%;
+	font-family: Titillium;
+	}
+	
+footer{
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	bottom: 10px;
+	opacity:0.4;
+	filter:alpha(opacity=40);
+}
+footer:hover{
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+footer > div{
+	background-color: #FFFFFF;
+	width: 95%;
+	margin: auto;
+	float: center;
